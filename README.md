@@ -1,2 +1,2 @@
 # western-anatomy-wwu
-Educational, interactive neuroanatomy website, featuring scientifically accurate 3D-model, developed for Western Washington University's psychology and neuroscience programs.
+Educational neuroanatomy website featuring interactive 3D brain model, developed by Connor Mausolf — BS, for Western Washington University's psychology and neuroscience programs.
