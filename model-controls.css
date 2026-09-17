@@ -1,0 +1,331 @@
+
+
+
+.ctrl-btn{
+  align-items: center;
+  display: flex;
+  transition: 0.1s ease;
+  color: #fff;
+
+  background: none;
+  border: none;
+  border-radius: 999px;
+
+  text-decoration: none;
+  font-size: 14px;
+}
+.ctrl-btn:hover{
+  border: none;
+  cursor: default;
+  color: var(--link-2);
+}
+.ctrl-btn.is-active{
+  color: var(--link-2);
+}
+
+.inner-btn{
+  height: 25px;
+  width: auto;
+  flex-shrink: 0;
+}
+
+
+.view-dropdown-container {
+  position: absolute;
+  top:14px;
+  right: 14px;
+  pointer-events: auto; /* Ensure clicks register */
+  z-index: 20; 
+  
+  background:none;
+  border: 0px solid #ffffff16;
+
+  border-radius:90px;
+  color: white;
+  padding: 4px 10px 4px 10px;
+  height: 30px;
+  align-items: center;
+  display: flex;
+}
+
+/* The Trigger Button */
+.view-dropdown-trigger {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#current-view-label{
+  font-size: 11.5px;
+  font-weight: 460;
+  font-family: monospace;
+}
+
+.dropdown-chevron {
+  height: 13px;
+  width: 13px;
+  flex-shrink: 0;
+  margin-top: -1.5px;
+  color: #fff;
+  transition: transform 0.15s ease;
+}
+.dropdown-chevron:hover{
+  color: var(--link-2);
+}
+
+
+.view-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 150px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+
+  background-color: #3f3f3f31;
+  backdrop-filter: blur(20px);
+  border: 1px solid #ffffff16;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+
+  opacity: 0;
+  transform: translateY(-4px);
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  z-index: 21;
+}
+.view-dropdown-container.is-open .view-dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.view-dropdown-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 12px;
+  font-family: monospace;
+  padding: 8px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.1s ease, color 0.1s ease;
+}
+.view-dropdown-item:hover,
+.view-dropdown-item:focus-visible {
+  background-color: #ffffff14;
+  color: var(--link-2);
+  outline: none;
+}
+
+
+
+
+
+.index-header-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6px;
+    margin-right: 8px;
+}
+
+
+
+/* ---- Explode / Opacity slider dock (bottom-left of the viewer) ---- */
+.action-sliders {
+  position: absolute;
+  left: 14px;
+  top: 12px;
+  z-index: 20;
+  pointer-events: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  background-color: #28282896;
+  backdrop-filter: blur(20px);
+  border: 0px solid #ffffff16;
+  border-radius: 17px;
+
+  padding: 7px 11px;
+  width: 250px;
+  color: white;
+}
+
+.slider-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.slider-row-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.slider-label {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  font-family: monospace;
+}
+.control-layout{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.slider-btn{
+  height: 25px;
+  width: auto;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  color: #fff;
+}
+.slider-btn:hover{
+  color: var(--link-2);
+}
+.slider-value {
+  font-size: 12px;
+  font-family: monospace;
+  color: #b7b9bb;
+  white-space: nowrap;
+}
+
+.hud-range {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 20px;
+  background: none;
+  cursor: pointer;
+}
+
+.hud-range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 6px;
+  background: #cbcbcbaa;
+  border-radius: 3px;
+  border: 0.5px solid #aeaeae89;
+}
+.hud-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border-1);
+  background: var(--link-2);
+  cursor: pointer;
+  margin-top: -4px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.hud-range::-moz-range-track {
+  width: 100%;
+  height: 6px;
+  background: #cbcbcbaa;
+  border-radius: 3px;
+}
+.hud-range::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border: none;
+  border-radius: 999px;
+  background: var(--link-2);
+  cursor: pointer;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.hud-range:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+.hud-range:disabled::-webkit-slider-thumb {
+  background: #888;
+  cursor: not-allowed;
+}
+.hud-range:disabled::-moz-range-thumb {
+  background: #888;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .action-sliders {
+    left: 16px;
+    bottom: 16px;
+    width: 180px;
+    padding: 10px 14px;
+  }
+}
+
+/* ---- Bottom-left study-mode control row: tooltip toggle, region
+   tracking, color-by-lobe, etc, built as a row (matching
+   .button-wrapper's pill styling) so more controls can be dropped in
+   here later. Wrapped in .bottom-controls-wrap so the "Object
+   tracking: on/off" status line can stack directly underneath it
+   without needing separately-computed absolute coordinates. ---- */
+.bottom-controls-wrap {
+  position: absolute;
+  left: 14px;
+  top: 90px;
+  pointer-events: auto;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.bottom-controls-row {
+  gap: 10px;
+
+  background-color: #28282896;
+  backdrop-filter: blur(20px);
+  border: 0px solid #ffffff16;
+
+  border-radius: 14px;
+  color: white;
+  padding: 0px 11px;
+  height: 39px;
+  align-items: center;
+  display: flex;
+}
+
+/* Small status readout under the row, reflecting the tracking-btn's
+   on/off state - green while region tracking (the auto zoom/pan "lock
+   on" when selecting a mesh) is active, red while it's off. */
+.tracking-status {
+  padding-left: 4px;
+  font-family: monospace;
+  font-size: 10px;
+  color: #888;
+  margin-top: 2px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  pointer-events: none;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+.tracking-status.is-on .tracking-status-value {
+  color: #3ecf6e;
+}
+.tracking-status.is-off .tracking-status-value {
+  color: #e0555a;
+}
+
+@media (max-width: 768px) {
+  .bottom-controls-wrap {
+    left: 16px;
+    top: auto;
+    bottom: 130px;
+  }
+}
+

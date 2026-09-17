@@ -1,0 +1,212 @@
+
+.panel-section p{ line-height:20px; color: #9a9ba4;
+  font-size: 12.5px;
+  font-weight: var(--lil-text);
+  margin-bottom: 4px;}
+
+
+.section-label {
+  align-items: center;         
+  font-size: 12.5px;
+  color: var(--big-text);
+  margin: 6px 0px;
+  font-weight: 600;
+
+}
+
+
+
+.panel{
+  margin: auto;
+  width: var(--panel-w, 27vw);
+  min-width: var(--panel-min);
+  max-width: var(--panel-max, 38vw);
+  flex-shrink: 0;
+  pointer-events: auto;
+  position: relative;
+  padding: 18px;
+  height: var(--main-height); 
+
+  border-left: 1px  solid var(--border-1);
+  backdrop-filter: blur(50px);
+
+    background-color: #0000003d;
+}
+
+/* Drag handle for resizing the panel, centered on the left border */
+.panel-resize-handle {
+  position: absolute;
+  top: 0;
+  left: -4px;
+  width: 9px;
+  height: 100%;
+  cursor: ew-resize;
+  z-index: 5;
+  background: transparent;
+  touch-action: none;
+}
+
+.panel-resize-handle::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 4px;
+  width: 1px;
+  height: 100%;
+  background: transparent;
+  transition: background-color 0.15s ease;
+}
+
+.panel-resize-handle:hover::after,
+.panel-resize-handle.is-dragging::after {
+  background-color: var(--link-2, #008cff);
+}
+
+body.panel-resizing {
+  cursor: ew-resize !important;
+  user-select: none;
+}
+
+body.panel-resizing .panel-resize-handle::after {
+  background-color: var(--link-2, #008cff);
+}
+
+.panel-content {
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+
+.info-grid {
+  display: grid;
+  align-items: start;
+}
+
+.info-text {
+  display: flex;
+  flex-direction: column;
+}
+.panel-section{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.panel-header {
+  display: flex;
+  justify-content: space-between; /* Pushes text left and button right */
+  align-items: center;
+  color: var(--big-text);
+  font-size: 30px;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.pathway{
+  font-weight: 400;
+  font-size: 11px;
+  margin-bottom:2px;
+  font-style: italic;
+  font-family: monospace;
+  color: #888888;
+  display: flex;
+  align-items: center;
+}
+
+.pathway-dot{
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 6px;
+  flex-shrink: 0;
+}
+
+#info-functionTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.function-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #484945;
+  color: #406c2d;
+  padding: 2px 12px 2px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 540;
+  height: 29px;
+  border: 1px solid, opacity 0.9;
+}
+
+.function-badge svg {
+  height: 17px;
+  width: auto;
+  display: block;
+  flex-shrink: 0;
+  stroke: var(--big-text);
+}
+
+/* Function tag color families */
+.function-badge--emotional{
+  background-color: #320517;
+  color: #cc5377;
+}
+.function-badge--motor{
+  background-color: #1b2414;
+  color: #68a249;
+}
+.function-badge--cognitive{
+  background-color: #382a0c;
+  color: #c0a46f;
+}
+.function-badge--sensory{
+  background-color: #0d1831;
+  color: #3673be;
+}
+
+
+/* --- Connections --- */
+.connections-row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+.connection-chip{
+  border: 1px solid var(--border-1);
+  color: var(--lil-text);
+  background: none;
+  font-size: 12.5px;
+  font-family: monospace;
+  font-weight: 500;
+  padding: 7px 10px;
+  border-radius: 8px;
+  cursor: default;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+
+}
+.connection-chip:hover{
+  background-color: #f4f4f416;
+  color: var(--big-text);
+}
+
+.empty-note{
+  font-style: italic;
+  color: #a7a7a7 !important;
+}
+
+
+  .header-contents{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+
+
+html, body { overflow-x: hidden;}

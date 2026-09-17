@@ -1,0 +1,270 @@
+
+/* --- MOBILE ADAPTATION --- */
+.mobile-select-container {
+  display: none; 
+}
+
+
+/* --- Responsive Mobile Layout --- */
+@media (max-width: 700px) {
+
+  .navbar{
+    justify-content: left;
+    gap: 10vw;
+    padding: 20px;
+  }
+
+.help-btn{
+  display: none;}
+
+  .panel-header {
+    font-size: 28px;
+    color: #d4dfe6;
+  }
+  .section-label{
+    font-size: 15px;
+    padding: 8px 0px 2px 0px;
+    color: #d4dfe6;
+  }
+
+  .pathway{
+    font-size: 12px;
+  }
+  .isolation-status-row{
+    display: none;
+  }
+  .brand{
+    position:fixed;
+    display: none;
+  }
+  .index-tog .mobile{
+    position: absolute;
+    margin: auto;
+    top: -11px;
+    width: auto;
+    height: 24px;
+    display: block;
+  }
+    .index-tog .desktop{
+    display: none;
+  }
+
+  .link2{
+    display: none;
+  }
+  .navbar{
+    justify-content: center;
+  }
+
+  .panel-section{
+    margin: 0;
+    padding: 0;
+    gap: 0;
+  }
+  
+  /* Stack everything vertically */
+  .layout-wrapper {
+    flex-direction: column;
+    overflow-y: auto; /* Let the user scroll the page */
+  }
+  .mm-sep10{
+    margin: 10px 0px 10px 0px;
+  }
+
+  /* Swap the sidebars */
+  .left-hand {
+    display: none !important; /* Hide desktop index */
+  }
+  .mobile-select-container {
+    display: block; /* Show mobile dropdown */
+    width: 100%;
+    height: 0px;
+    background-color: #000000;
+    z-index: 100;
+  }
+  
+  /* Native select styling */
+  #mobile-region-select {
+    width: 60%;
+    appearance: auto; /* Forces Apple/Android native roller */
+    padding: 10px;
+    margin: 12px;
+    font-size: 15px; /* 16px prevents iOS from forcibly zooming the camera */
+    border-radius: 8px;
+    background-color: #0000001e;
+    border: 1px var(--hoverlay-2);
+    color: #ffffff;
+    backdrop-filter: blur(10px);
+  }
+
+  .model-controls{
+    display: flex;
+    top: 10px;
+    height: 40px;
+    border-radius: none;
+  }
+
+  .mm-sep4{
+    display: none;
+  }
+  .view-dropdown-container{
+    display: none;
+  }
+
+  /* Restructure Viewer for Mobile Real Estate */
+  .viewer {
+    width: 100vw;
+    height: 60vh; 
+    margin: 0;
+    border-radius: 0;
+    flex: none; /* Prevents flexbox from stretching it */
+  }
+  .window {
+    border-radius: 0;
+  }
+
+
+  /* Shrink external controls so they don't overlap on small screens */
+  .ext_controls {
+   display: none;
+  }
+
+
+  /* Move info panel directly below the viewer */
+  .panel {
+    width: 100vw;
+    height: auto;
+    min-height: 30vh;
+    margin: 0;
+    border-radius: 0;
+    border: none;
+    border-top: 1px solid var(--border-2);
+    padding: 12px 16px 16px 16px;
+    position: relative; /* Removes it from absolute positioning if applied */
+
+    background-color: #101011c4;
+    backdrop-filter: blur(140px);
+
+  }
+
+
+  .panel-content{
+    margin-top: 0px;
+  }
+  .panel-content p{
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0px;
+    color: #a9afb2;
+
+  }
+
+  .section-label{
+    margin: 0px;
+  }
+
+
+
+  /* Stack the footer vertically */
+  .site-footer {
+    flex-direction: column;
+    padding: 16px; 
+    position: relative; /* Acts as an anchor for the absolute logo */
+    background-color: #f9f9ff;
+  }
+  .footer-credits-text{
+        order: 2;
+        line-height: 18px;
+        }
+
+          .footer-credits-text p{
+            margin-bottom: 10px;
+          }
+
+    .footer-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+ .footer-links {
+    order: 4;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    align-items: flex-start;
+    max-width: 90%; /* Leaves empty space for the logo */
+  }
+
+  .footer-bottom-row {
+    display: contents; 
+  }
+  .footer-logo {
+    position: absolute;
+    bottom: 1rem;
+    right: 16px;
+    width: 114px; /* Adjust based on your image size */
+    margin: 0;
+  }
+    .footer-feedback {
+    order: 1;
+    justify-content: flex-start;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #c5d5df; /* Creates the first divider */
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  .footer-divider {
+    order: 3;
+    margin: 1rem 0;
+    width: 100%;
+  }
+
+  .notice{
+    height: auto;
+    padding: 12px 16px;
+    background-color: #2e4169;
+    color: #e7ebeb;
+  }
+  .notice svg{
+    display: none;
+  }
+
+    .brand {
+    order: -1; /* Pushes the logo to the very front of the line */
+    margin-right: auto; /* Pushes the Home/Contact/References links to the right side */
+  }
+
+  .brand img {
+    position: absolute; /* Kills the stubborn fixed positioning */
+    right: 20px; /* Clears the 'margin: auto' inherited from the desktop CSS */
+  }
+
+  .references{
+      padding: 0px 20px;
+  }
+
+  #track-btn{
+    display: none;
+  }
+
+
+  .setup{
+ padding: 20px 20px 10px 10px;
+ font-size: 14px;
+ margin-bottom: 2rem;
+}
+.setup h2{
+  font-size: 24px;
+  max-width: 940vw;
+}
+.setup p{
+  max-width: 90vw;
+     margin-left: 4px;
+
+}
+
+.setup svg{
+  width: 50px;
+  height: auto;
+}
+}
